@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>cuddle_.corner | Handmade Hampers</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+:root {
+    --primary-color: #c9a227;
+    --accent-color: #ff6b81;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body {
+    font-family:'Roboto', sans-serif;
+    line-height:1.6;
+    color:white;
+    background: linear-gradient(135deg, rgba(255,192,203,0.6), rgba(255,182,193,0.6)),
+                url("https://images.unsplash.com/photo-1508385082359-fb0a62d33e5c?auto=format&fit=crop&w=1600&q=80") no-repeat center/cover;
+    background-size:cover;
+    position:relative;
+    overflow-x:hidden;
+}
+
+body::before {
+    content:"";
+    position:fixed;
+    inset:0;
+    background: rgba(0,0,0,0.25);
+    z-index:-1;
+}
+
+/* Floating Hearts Animation */
+.heart {
+    position: absolute;
+    font-size: 20px;
+    color: #ff6b81;
+    opacity: 0.7;
+    animation: floatHeart linear infinite;
+    z-index:0;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) scale(0.8);
+        opacity:0.7;
+    }
+    50% {
+        opacity:1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.2);
+        opacity:0;
+    }
+}
+
+/* Header */
+header {
+    display:flex;
+    justify-content:center;
+    padding:20px 5%;
+    background:rgba(0,0,0,0.8);
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+.logo { 
+    font-family:'Montserrat', sans-serif; 
+    font-size:2rem; 
+    font-weight:700; 
+    letter-spacing:2px; 
+}
+.logo span { color:var(--primary-color); }
+
+/* Hero */
+.hero {
+    display:flex;
+    flex-direction:column-reverse;
+    padding:60px 5%;
+    align-items:center;
+    gap:40px;
+    text-align:center;
+}
+.hero-text h1 {
+    font-family:'Montserrat', sans-serif;
+    font-weight:700;
+    font-size:2.6rem;
+    margin-bottom:15px;
+}
+.hero-text p {
+    font-weight:500;
+    font-size:1.1rem;
+    margin-bottom:25px;
+}
+.hero-image img {
+    width:100%;
+    max-width:450px;
+    border-radius:20px;
+    object-fit:cover;
+    box-shadow:0 25px 50px rgba(0,0,0,0.6);
+}
+
+/* Buttons */
+.btn {
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:30px;
+    font-weight:600;
+    transition:0.4s;
+}
+.btn-instagram {
+    background:linear-gradient(45deg,#f09433,#dc2743,#bc1888);
+    font-size:1rem;
+}
+.btn:hover { transform:translateY(-3px) scale(1.05); }
+
+/* Product Info */
+.product-info {
+    padding:80px 5%;
+    text-align:center;
+}
+.product-info h2 {
+    font-family:'Montserrat', sans-serif;
+    font-weight:700;
+    font-size:2.4rem;
+    margin-bottom:15px;
+}
+
+/* Gallery */
+.special-gifts {
+    padding:80px 5%;
+    text-align:center;
+}
+.special-gifts h2 {
+    font-family:'Montserrat', sans-serif;
+    font-weight:700;
+    font-size:2.4rem;
+    margin-bottom:50px;
+}
+.gift-gallery {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    max-width:1200px;
+    margin:auto;
+}
+.gift-gallery img {
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:20px;
+    box-shadow:0 15px 30px rgba(0,0,0,0.5);
+    transition:0.4s ease, box-shadow 0.4s ease;
+}
+.gift-gallery img:hover {
+    transform:scale(1.08);
+    box-shadow:0 25px 50px rgba(201,162,39,0.6);
+}
+
+/* Instagram Section */
+.instagram-section {
+    padding:60px 5%;
+    text-align:center;
+    background: rgba(255,192,203,0.15);
+    border-radius:25px;
+    margin:50px auto;
+    max-width:800px;
+}
+.instagram-section h2 {
+    font-family:'Montserrat', sans-serif;
+    font-weight:700;
+    font-size:2rem;
+    margin-bottom:25px;
+}
+.instagram-section a {
+    display:inline-block;
+    padding:14px 28px;
+    border-radius:30px;
+    background: linear-gradient(45deg,#f09433,#dc2743,#bc1888);
+    color:white;
+    font-weight:600;
+    font-size:1rem;
+    transition:0.3s;
+}
+.instagram-section a:hover {
+    transform:scale(1.05);
+}
+
+/* Footer */
+footer {
+    background:linear-gradient(135deg,#000000,#111111);
+    padding:40px 5%;
+    text-align:center;
+    font-family:'Roboto', sans-serif;
+    font-weight:500;
+}
+footer h3 {
+    font-family:'Montserrat', sans-serif;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+/* Responsive */
+@media (min-width:768px) {
+    .hero { flex-direction:row; justify-content:center; text-align:left; }
+    .hero-text h1 { font-size:3rem; }
+}
+@media (max-width:600px) {
+    .gift-gallery { grid-template-columns:repeat(3,1fr); gap:15px; }
+    .hero-text h1 { font-size:2rem; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Floating Hearts -->
+<span class="heart" style="left:10%; animation-duration:8s;">❤</span>
+<span class="heart" style="left:25%; animation-duration:10s; font-size:18px;">❤</span>
+<span class="heart" style="left:40%; animation-duration:9s; font-size:22px;">❤</span>
+<span class="heart" style="left:60%; animation-duration:11s; font-size:20px;">❤</span>
+<span class="heart" style="left:75%; animation-duration:7s; font-size:24px;">❤</span>
+<span class="heart" style="left:85%; animation-duration:12s; font-size:18px;">❤</span>
+
+<header>
+    <div class="logo">cuddle_<span>corner</span></div>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Buy a Special Customized Hamper Gift for Your Loved One</h1>
+        <p>Discover the elegance of our <strong>Handmade Hamper</strong> collection. Crafted with love in Alibag.</p>
+        <a href="https://www.instagram.com/cuddle_.corner/" target="_blank" class="btn btn-instagram">
+            <i class="fab fa-instagram"></i> @cuddle_.corner
+        </a>
+    </div>
+    <div class="hero-image">
+        <img src="images/hamper1.jpeg" alt="Hamper Gift">
+    </div>
+</section>
+
+<section class="product-info">
+    <h2>The Handmade Hamper Collection</h2>
+    <p>We create unique handcrafted gift hampers perfect for birthdays, anniversaries and special occasions.</p>
+    <div style="color:var(--primary-color);margin-top:10px;">📍 Based in Alibag</div>
+</section>
+
+<section class="special-gifts">
+    <h2>Our Special Gifts</h2>
+   <div class="gift-gallery">
+    <img src="images/hamper1.jpeg" alt="Hamper 1">
+    <img src="images/hamper2.JPG" alt="Hamper 2"> 
+    <img src="images/hamper3.jpeg" alt="Hamper 3">
+    <img src="images/hamper4.jpeg" alt="Hamper 4">
+    <img src="images/hamper5.jpeg" alt="Hamper 5">
+    <img src="images/hamper6.JPG" alt="Hamper 6">  
+    <img src="images/hamper7.jpeg" alt="Hamper 7">
+    <img src="images/hamper8.jpeg" alt="Hamper 8">
+    <img src="images/hamper10.JPG" alt="Hamper 10"> 
+</div>
+</section>
+
+<section class="instagram-section">
+    <h2>Follow Us on Instagram</h2>
+    <a href="https://www.instagram.com/cuddle_.corner/" target="_blank">
+        <i class="fab fa-instagram"></i> @cuddle_.corner
+    </a>
+</section>
+
+<footer>
+    <h3>cuddle_.corner</h3>
+    <p>For Orders & Inquiries</p>
+    <div style="margin-top:20px;opacity:0.85;">© 2026 cuddle_.corner. All rights reserved.</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>cuddle_.corner | Handmade Hampers</title>
+
+<style>
+:root {
+    --primary-color: #d4af37;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height:1.6;
+    color:white;
+    background: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80") no-repeat center/cover;
+    position: relative;
+}
+
+body::before {
+    content:"";
+    position: fixed;
+    inset:0;
+    background: rgba(0,0,0,0.6);
+    z-index:-1;
+}
+
+a { text-decoration:none; color:inherit; }
+
+header {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 5%;
+    background:rgba(0,0,0,0.6);
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+.logo { font-size:1.5rem; font-weight:bold; }
+.logo span { color:var(--primary-color); }
+
+.hero {
+    display:flex;
+    flex-direction:column-reverse;
+    padding:50px 5%;
+    align-items:center;
+    gap:30px;
+}
+
+.hero-text { text-align:center; }
+.hero-text h1 { font-size:2.5rem; margin-bottom:15px; }
+.hero-text p { font-size:1.1rem; margin-bottom:25px; }
+
+.hero-image img {
+    max-width:100%;
+    border-radius:10px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.4);
+}
+
+.product-info {
+    padding:50px 5%;
+    text-align:center;
+}
+
+/* SPECIAL GIFTS SECTION */
+.special-gifts {
+    padding:60px 5%;
+    text-align:center;
+}
+
+.special-gifts h2 {
+    font-size:2.2rem;
+    margin-bottom:40px;
+}
+
+.gift-gallery {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.gift-gallery img {
+    width:100%;
+    height:300px;           /* Fixed height for equal size */
+    object-fit:cover;       /* Proper image cropping */
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.5);
+    transition:0.4s ease;
+}
+
+.gift-gallery img:hover {
+    transform:scale(1.05);
+}
+
+.btn-instagram {
+    display:inline-block;
+    background:linear-gradient(45deg,#f09433,#dc2743,#bc1888);
+    padding:15px 30px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn-instagram:hover {
+    transform:translateY(-3px);
+}
+
+footer {
+    background:rgba(0,0,0,0.7);
+    padding:40px 5%;
+    text-align:center;
+}
+
+@media (min-width:768px) {
+    .hero { flex-direction:row; height:80vh; }
+    .hero-text { text-align:left; padding-right:40px; }
+    .hero-text h1 { font-size:3.5rem; }
+}
+
+@media (max-width:480px) {
+    .hero-text h1 { font-size:2rem; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">cuddle_<span>corner</span></div>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Buy a special customize hamper gifts for your special person</h1>
+        <p>Discover the elegance of our <strong>Hamper Handmade</strong> collection. Crafted with love in Alibag.</p>
+        <a href="https://www.instagram.com/cuddle_.corner/" target="_blank" class="btn-instagram">Order Now via DM</a>
+    </div>
+
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1513885535751-8b9238bd345a?auto=format&fit=crop&w=800&q=80" alt="Hamper Handmade Gift">
+    </div>
+</section>
+
+<section class="product-info">
+    <h2>The Hamper Handmade Collection</h2>
+    <p>We create unique handcrafted gift hampers perfect for birthdays, anniversaries and special occasions.</p>
+    <div>📍 Based in <span style="color:gold;">Alibag</span></div>
+</section>
+
+<section class="special-gifts">
+    <h2>Our Special Gifts</h2>
+    <div class="gift-gallery">
+        <img src="cuddle corner images/hamper1.jpeg" alt="Hamper 1">
+        <img src="cuddle corner images/hamper2.JPG" alt="Hamper 2">
+        <img src="cuddle corner images/hamper3.jpeg" alt="Hamper 3">
+        <img src="cuddle corner images/hamper4.jpeg" alt="Hamper 4">
+        <img src="cuddle corner images/hamper5.jpeg" alt="Hamper 5">
+        <img src="cuddle corner images/hamper6.JPG" alt="Hamper 6">
+        <img src="cuddle corner images/hamper7.jpeg" alt="Hamper 7">
+        <img src="cuddle corner images/hamper8.jpeg" alt="Hamper 8">
+        <img src="cuddle corner images/hamper10.JPG" alt="Hamper 10">
+    </div>
+</section>
+
+<footer>
+    <h3>cuddle_.corner</h3>
+    <p>For Orders & Inquiries</p>
+    <a href="https://www.instagram.com/cuddle_.corner/" class="btn-instagram" style="margin-top:15px;font-size:0.9rem;padding:10px 20px;">DM @cuddle_.corner</a>
+    <div style="margin-top:20px;opacity:0.8;">© 2026 cuddle_.corner. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
